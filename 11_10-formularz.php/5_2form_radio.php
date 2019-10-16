@@ -6,22 +6,24 @@
   </head>
   <body>
     <?php
-    if(!empty($GET['country']) && !empty($_GET['lang']) && isset($GET['button'])){
-      $country= $_GET['country'];
-      $lang=$_GET['lang'];
-      switch ($lang) {
-        case 'pl':
-          $lang='Polska';
-          break;
-          case 'en':
-            $lang='Anglia';
-          break;
+      // to jest $_GET, nie $GET, uważaj na to
+      if(!empty($_GET['country']) && !empty($_GET['lang']) && isset($_GET['button'])){
+        $country= $_GET['country'];
+        $lang=$_GET['lang'];
+        switch ($lang) {
+          case 'pl':
+            $lang='Polska';
+            break;
+            case 'en':
+              $lang='Anglia';
+            break;
+        }
+        echo "Kraj: $country, język : $lang ";
       }
-      echo "Kraj: $country, język : $lang ";
-    }
-
-     ?>
-    <form method="post">
+    ?>
+    <!-- Jak dajesz forma, to method musi być taki, jak to czym przyjmujesz w php, 
+         więc jak tu dajesz get, to w php też get-->
+    <form method="get">
       <input type="text" name="country" placeholder="Podaj kraj" autofocus><br><br>
         <input type="radio" name="lang" value="pl" checked>polski
         <input type="radio" name="lang" value="en" checked>angielski
@@ -30,3 +32,4 @@
 
   </body>
 </html>
+
