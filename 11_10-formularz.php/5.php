@@ -13,6 +13,7 @@
 
       <?php
 if (!empty($_POST['name']) && !empty($_POST['age'])){
+    //just a comment
       $name=$_POST['name'];
       $age=$_POST['age'];
       $rozmiar=strlen($name);
