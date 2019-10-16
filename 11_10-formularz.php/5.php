@@ -8,7 +8,7 @@
   <body>
     <form method="post">
       <input type="text" name="name" placeholder="Podaj imie" autofocus autocomplete="off"><br>
-      <input type="number" name"age" placeholder="Podaj wiek"><br>
+      <input type="number" name="age" placeholder="Podaj wiek"><br>
       <input type="submit" name="button" value="Zatwierdz"><br>
 
       <?php
