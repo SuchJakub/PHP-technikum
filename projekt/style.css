@@ -1,0 +1,224 @@
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:Arial, sans-serif;
+}
+a{
+    text-decoration:none;
+    font-weight:bold;
+    color:black;
+}
+main{
+    display:flex;
+    flex-direction:row;
+    justify-content: flex-start;
+
+}
+header
+{
+    width:100%;
+    height:100px;
+    background-color:#989898;
+    text-align: center;
+    font-size: 30px;
+    font-weight:bold;
+    font-family:Verdana, sans-serif;
+    color:white;
+    text-shadow:black 1px 1px 4px;
+    border-bottom:grey inset 1px;
+}
+nav
+{
+
+    height: calc(100vh - 130px);
+    width:15%;
+   background-color:white;
+}
+ol
+{
+  list-style-type: none;
+  width: 100%;
+  margin: 0;
+  height: 100%;
+  overflow: auto;
+    position:relative;
+}
+li a
+{
+
+  display: block;
+    width:100%;
+    height:60px;
+    text-align:center;
+   color: black;
+    font-weight:bold;
+  text-decoration: none;
+    padding-top:20px;
+
+
+}
+li a:hover{
+    background-color:#EDEDED;
+
+}
+
+li a:hover:after{
+    content:" ▶";
+}
+li a#current{
+    background-color:#EDEDED;
+}
+li a#current::after{
+    background-color:#EDEDED;
+    content:" ▶";
+}
+section#thatwindow
+{
+    width:85%;
+    height: calc(100vh - 130px);
+    text-align:center;
+    padding:20px;
+    background-color:#EDEDED;
+
+
+
+}
+section#galeria > div > img{
+    width:200px;
+    height:200px;
+}
+section#systemy, section#galeria, section#contactbox{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: flex-start;
+    width:85%;
+
+}
+section#galeria{
+    justify-content: space-around;
+    width:100%;
+}
+section#contactbox{
+    padding:50px 0;
+    justify-content: space-around;
+    width:100%;
+}
+section#galeria{
+    padding:40px;
+}
+section#systemy > div{
+    position:relative;
+    width:50%;
+    height:50%;
+    border:solid black 1px;
+}
+article.textbox{
+    position:absolute;
+    width:70%;
+    padding:50px;
+    top:50% ;
+    left:50%;
+     transform:translate(-50%, -50%);
+    text-align:center;
+    color:white;
+    background-color:rgba(0, 0, 0, 1);
+    text-shadow:black 1px 1px 1px;
+    display:none;
+    z-index:2;
+    border-radius:100%;
+
+
+
+
+}
+article#contact{
+    font-size:20px;
+    font-weight:bold;
+}
+div#android:hover > article.textbox, div#ios:hover > article.textbox, div#windows:hover > article.textbox, div#cyan:hover > article.textbox{
+    display:block;
+    opacity:1;
+
+}
+div#android:hover, div#ios:hover, div#windows:hover, div#cyan:hover{
+    box-shadow:grey;
+}
+div#android, div#ios, div#windows, div#cyan{
+    text-align:center;
+    color:white;
+    position:relative;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position:center center;
+    z-index:1;
+}
+.up{
+    font-size:30px;
+    text-shadow:black 1px 1px 5px;
+    font-weight:bold;
+}
+.przyc{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-color:rgba(255,255,255,0.2);
+    border:none;
+    z-index:2;
+    cursor: pointer;
+}
+.przyc:hover{
+   background-color:rgba(255,255,255,0);
+}
+div#android{
+    background-image:url("zdjecia/francja.png");
+}
+div#ios{
+    background-image:url("zdjecia/anglia.png");
+}
+div#windows{
+    background-image:url("zdjecia/niemcy.png");
+}
+div#cyan{
+    background-image:url("zdjecia/rosja.png");
+}
+article.syslink{
+    width:300px;
+    position:absolute;
+    left:calc(65% - 300px);
+    bottom:30px;
+
+}
+article#textplace{
+    padding: 40px 50px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height:calc(100vh - 230px);
+    text-align:justify;
+}
+article#textplace::-webkit-scrollbar{
+    width: 1em;
+}
+article#textplace::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset -10px 0 10px rgba(0,0,0,0);
+
+}
+article#textplace::-webkit-scrollbar-thumb {
+  background-color: #989898;
+  outline: 1px solid slategrey;
+}
+footer{
+    height:30px;
+    background-color:#989898;
+    color:white;
+    font-style:italic;
+    text-align:right;
+    padding-right:20px;
+    padding-top:10px;
+}
